@@ -28,8 +28,8 @@ aragonEnsLabelName = "aragonpm"       # Aragon ENS label name
 [dao.initialSettings.voting]
 minSupportRequired = "500000000000000000"     # Minimum support required (50%)
 minAcceptanceQuorum = "50000000000000000"     # Minimum acceptance quorum (5%)
-voteDuration = 300                            # Vote duration in seconds (5 minutes)
-objectionPhaseDuration = 60                   # Objection phase duration in seconds (1 minute)
+voteDuration = 60                            # Vote duration in seconds (1 minute)
+objectionPhaseDuration = 15                   # Objection phase duration in seconds (15 seconds)
 
 [dao.initialSettings.fee]
 totalPercent = 10                     # Total fee percentage
@@ -37,8 +37,8 @@ treasuryPercent = 50                  # Treasury fee percentage
 nodeOperatorsPercent = 50             # Node operators fee percentage
 
 [dao.initialSettings.token]
-name = "TEST Lido DAO Token"          # DAO token name for testnet
-symbol = "TLDO"                       # DAO token symbol for testnet
+name = "Devnet Lido DAO Token"          # DAO token name for testnet
+symbol = "DLDO"                         # DAO token symbol for testnet
 
 # Vesting parameters for initial token distribution
 [vesting]
@@ -173,7 +173,8 @@ frameDurationInSec = 48               # Duration of each processing frame in sec
 
 # Predeposit guarantee configuration for validator deposit guarantees
 [predepositGuarantee]
-gIndex = "0x0000000000000000000000000000000000000000000000000096000000000028"  # Generalized index for state verification
+# Generalized indexes for state verification
+gIndex = "0x0000000000000000000000000000000000000000000000000096000000000028"
 gIndexAfterChange = "0x0000000000000000000000000000000000000000000000000096000000000028"
 changeSlot = 0                        # Slot number when the change takes effect
 
@@ -181,7 +182,7 @@ changeSlot = 0                        # Slot number when the change takes effect
 [operatorGrid]
 # Default tier parameters for operator classification and fee structure
 [operatorGrid.defaultTierParams]
-shareLimitInEther = "250"             # Share limit per tier in ETH
+shareLimitInEther = "1"               # Share limit per tier in ETH
 reserveRatioBP = 2000                 # Reserve ratio in basis points (20%)
 forcedRebalanceThresholdBP = 1800     # Threshold for forced rebalancing in basis points (18%)
 infraFeeBP = 500                      # Infrastructure fee in basis points (5%)
